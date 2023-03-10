@@ -5,9 +5,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./styles/styles.css" rel="stylesheet" />
-    <title>Document</title>
+    <title>Css bayan</title>
   </head>
   <body>
-    <h1>Css bayan</h1>
+    <div class="wrapper">
+      <div class="accordion">
+        <h1 class="accordion__header">CSS Bayan</h1>
+        <!--  MEM #1  -->
+        <label for="tab1" class="label-tab">
+          <input id="tab1" name="tab" type="radio" checked />
+          <div class="accordion__tab">
+            <div class="accordion__tab-title">
+              <p>What will you choose?</p>
+              <i class="accordion__tab-icon"></i>
+            </div>
+            <div class="accordion__tab-content">
+              <img src="./img/mem1.png" alt="Angular or react" />
+              <!-- change img size or change images !!!!!!-->
+            </div>
+          </div>
+        </label>
+
+        <!--  MEM #2  -->
+        <label for="tab2" class="label-tab">
+          <input id="tab2" name="tab" type="radio" />
+          <div class="accordion__tab">
+            <div class="accordion__tab-title">
+              <p>Still ahead</p>
+              <i class="accordion__tab-icon"></i>
+            </div>
+            <div class="accordion__tab-content">
+              <img src="./img/mem2.png" alt="Learn learn learn" />
+            </div>
+          </div>
+        </label>
+
+        <!--  MEM #3  -->
+        <label for="tab3" class="label-tab">
+          <input id="tab3" name="tab" type="radio" />
+          <div class="accordion__tab">
+            <div class="accordion__tab-title">
+              <p>I need some rest</p>
+              <i class="accordion__tab-icon"></i>
+            </div>
+            <div class="accordion__tab-content">
+              <img src="./img/mem3.png" alt="Some rest" />
+            </div>
+          </div>
+        </label>
+
+        <!-- MEM #4  -->
+        <label for="tab4" class="label-tab">
+          <input id="tab4" name="tab" type="radio" />
+          <div class="accordion__tab">
+            <div class="accordion__tab-title">
+              <p>Rss spares no one</p>
+              <i class="accordion__tab-icon"></i>
+            </div>
+            <div class="accordion__tab-content">
+              <img src="./img/mem4.png" alt="No spares" />
+            </div>
+          </div>
+        </label>
+      </div>
+    </div>
   </body>
 </html>
