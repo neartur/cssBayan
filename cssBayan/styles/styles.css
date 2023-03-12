@@ -16,12 +16,6 @@ html {
   overflow-y: scroll;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-}
-
 body {
   font-family: monospace;
   font-size: 1.6rem;
@@ -69,6 +63,11 @@ body {
   align-items: center;
 }
 
+.accordion__tab-content {
+  display: flex;
+  justify-content: center;
+}
+
 .accordion__tab-icon {
   display: block;
   width: 3rem;
@@ -79,30 +78,31 @@ body {
   opacity: 1;
 }
 
-.accordion__tab-content {
-  transition: all 1.5s;
-}
-
-.accordion__tab-content img {
-  display: block;
-  width: 100%;
-  max-width: 30rem;
-  margin: 0 auto;
+img {
+  opacity: 0;
+  max-height: 0;
+  width: auto;
+  transition: 1s ease;
 }
 
 .label-tab:has(input:checked) .accordion__tab-title {
   color: #ed682b;
 }
 
-.label-tab:not(:has(input:checked)) .accordion__tab-content {
-  height: 0;
-  transform: scale(0);
+.label-tab:has(input:checked) img {
+  opacity: 1;
+  max-height: min(70vw, 30rem);
 }
 
-.label-tab:has(input:checked) .accordion__tab-content {
+/* .label-tab:not(:has(input:checked)) .accordion__tab-content {
+  height: 0;
+  transform: scale(0);
+} */
+
+/* .label-tab:has(input:checked) .accordion__tab-content {
   height: 100%;
   transform: scale(1);
-}
+} */
 
 .label-tab:active {
   opacity: 0.5;
@@ -134,14 +134,14 @@ body {
     transition-duration: 2s;
     opacity: 1;
   }
-  .label-tab:hover .accordion__tab .accordion__tab-content {
+  /* .label-tab:hover .accordion__tab .accordion__tab-content {
     height: 100%;
     transform: scale(1);
-  }
+  } */
 
-  .label-tab:hover .accordion__tab .accordion__tab-content img {
-    height: 100%;
-    transform: scale(1);
+  .label-tab:hover .accordion__tab img {
+    opacity: 1;
+    max-height: min(70vw, 30rem);
   }
 
   .label-tab:hover .accordion__tab .accordion__tab-icon {
@@ -157,6 +157,10 @@ body {
   h1 {
     font-size: 2rem;
     margin-bottom: 3rem;
+  }
+  .label-tab:has(input:checked) img {
+    opacity: 1;
+    width: 100%;
   }
 }
 
@@ -187,6 +191,10 @@ body {
   .accordion .accordion__tab-icon {
     background-image: url(../img/icons/accordion-close.png);
     opacity: 1;
+  }
+  .label-tab:has(input:checked) img {
+    opacity: 1;
+    max-height: min(70vw, 20rem);
   }
 }
 
